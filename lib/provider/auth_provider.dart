@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -7,6 +8,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:phoneauth/screans/otp_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../model/user_model.dart';
+
+import '../screens/otp_screen.dart';
 
 class AuthProvider extends ChangeNotifier {
   bool _isSignedIn = false;
@@ -170,7 +175,7 @@ class AuthProvider extends ChangeNotifier {
   Future getDataFromSP() async {
     SharedPreferences s = await SharedPreferences.getInstance();
     String data = s.getString("user_model") ?? '';
-    _userModel = UserModel.fromMap(jsonDecode(data));
+    _userModel = userModel.fromMap(json(data));
     _uid = _userModel!.uid;
     notifyListeners();
   }

@@ -2,8 +2,10 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:phoneauth/provider/auth_provider.dart';
+import 'package:phoneauth/screans/home_screen.dart';
 import 'package:phoneauth/widgets/custom_button.dart';
 import 'package:provider/provider.dart';
+
 
 class UserInformationScreen extends StatefulWidget {
   const UserInformationScreen({super.key});
@@ -41,7 +43,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         child: isLoading == true
             ? const Center(
                 child: CircularProgressIndicator(
-                  color: Color.fromARGB(255, 174, 92, 11),
+                  color: Colors.purple,
                 ),
               )
             : SingleChildScrollView(
@@ -133,7 +135,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: TextFormField(
-        cursorColor: Color.fromARGB(255, 170, 75, 17),
+        cursorColor: Colors.purple,
         controller: controller,
         keyboardType: inputType,
         maxLines: maxLines,
@@ -142,7 +144,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
             margin: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: Color.fromARGB(255, 195, 100, 11),
+              color: Colors.purple,
             ),
             child: Icon(
               icon,
@@ -202,7 +204,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         },
       );
     } else {
-      showSnackBar(context, "Please upload your profile Photo");
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Please upload your profile Photo")));
     }
   }
 }
