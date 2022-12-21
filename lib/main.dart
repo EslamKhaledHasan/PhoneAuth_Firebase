@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:phoneauth/screans/welcome_screan.dart';
+import 'package:phoneauth/screans/welcome_screen.dart';
 void main()  {
  
   runApp(const MyApp());
