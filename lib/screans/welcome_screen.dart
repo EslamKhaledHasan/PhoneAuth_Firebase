@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:phoneauth/provider/auth_provider.dart';
+import 'package:phoneauth/screans/home_screen.dart';
 import 'package:phoneauth/screans/register_screen.dart';
 import 'package:phoneauth/widgets/custom_button.dart';
+import 'package:provider/provider.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -12,7 +15,7 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-    
+     final ap = Provider.of<AuthProvider>(context, listen: false);
 
     return Scaffold(
       body: SafeArea(

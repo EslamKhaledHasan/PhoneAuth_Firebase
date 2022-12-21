@@ -2,7 +2,9 @@ import 'package:country_picker/country_picker.dart';
 
 
 import 'package:flutter/material.dart';
+import 'package:phoneauth/provider/auth_provider.dart';
 import 'package:phoneauth/widgets/custom_button.dart';
+import 'package:provider/provider.dart';
 
 
 
@@ -148,12 +150,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 50,
-                  child: CustomButton(
-                      text: "Login", onPressed: () => sendPhoneNumber()),
-                ),
+                // SizedBox(
+                //   width: double.infinity,
+                //   height: 50,
+                //   child: CustomButton(
+                //       text: "Login", onPressed: () => sendPhoneNumber()),
+                // ),
               ],
             ),
           ),
