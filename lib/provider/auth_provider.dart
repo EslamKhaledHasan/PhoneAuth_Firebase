@@ -60,7 +60,7 @@ class AuthProvider extends ChangeNotifier {
           },
           codeAutoRetrievalTimeout: (verificationId) {});
     } on FirebaseAuthException catch (e) {
-      showSnackBar(context, e.message.toString());
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("")));
     }
   }
 
@@ -85,7 +85,7 @@ class AuthProvider extends ChangeNotifier {
       _isLoading = false;
       notifyListeners();
     } on FirebaseAuthException catch (e) {
-      showSnackBar(context, e.message.toString());
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("")));
       _isLoading = false;
       notifyListeners();
     }
@@ -130,7 +130,7 @@ class AuthProvider extends ChangeNotifier {
         notifyListeners();
       });
     } on FirebaseAuthException catch (e) {
-      showSnackBar(context, e.message.toString());
+     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("")));
       _isLoading = false;
       notifyListeners();
     }

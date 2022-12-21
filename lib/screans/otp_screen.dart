@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:phoneauth/provider/auth_provider.dart';
 import 'package:phoneauth/screans/home_screen.dart';
 import 'package:phoneauth/widgets/custom_button.dart';
+import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -50,7 +51,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           color: Colors.purple.shade50,
                         ),
                         child: Image.asset(
-                          "assets/2.png",
+                          "assets/pn2.png",
                         ),
                       ),
                       const SizedBox(
@@ -111,7 +112,7 @@ class _OtpScreenState extends State<OtpScreen> {
                             if (otpCode != null) {
                               verifyOtp(context, otpCode!);
                             } else {
-                              showSnackBar(context, "Enter 6-Digit code");
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Enter 6-Digit code")));
                             }
                           },
                         ),
