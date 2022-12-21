@@ -10,7 +10,7 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-    final ap = Provider.of<AuthProvider>(context, listen: false);
+    
 
     return Scaffold(
       body: SafeArea(
@@ -21,7 +21,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  "assets/1.png",
+                  "assets/pn.webp",
                   height: 300,
                 ),
                 const SizedBox(height: 20),
