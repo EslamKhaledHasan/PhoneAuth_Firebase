@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:phoneauth/screans/welcome_screen.dart';
 void main()  {
- 
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

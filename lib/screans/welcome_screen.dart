@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phoneauth/screans/register_screen.dart';
+import 'package:phoneauth/widgets/custom_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
