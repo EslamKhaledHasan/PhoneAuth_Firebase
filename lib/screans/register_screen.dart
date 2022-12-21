@@ -1,6 +1,8 @@
-import 'package:country_pickers/country.dart';
+import 'package:country_picker/country_picker.dart';
+
+
 import 'package:flutter/material.dart';
-import 'package:country_pickers/country.dart';
+
 
 
 
@@ -15,7 +17,17 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController phoneController = TextEditingController();
 
-  
+ Country selectedCountry = Country(
+  phoneCode: "20",
+    countryCode: "EG",
+    e164Sc: 0,
+    geographic: true,
+    level: 1,
+    name: "Egypt",
+    example: "Egypt",
+    displayName: "Egypt",
+    displayNameNoCountryCode: "EG",
+    e164Key: "e164Key",);
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +109,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           showCountryPicker(
                               context: context,
                               countryListTheme: const CountryListThemeData(
-                                  bottomSheetHeight: 500),
+                                  bottomSheetHeight: 550),
                               onSelect: (value) {
                                 setState(() {
                                   selectedCountry = value;
