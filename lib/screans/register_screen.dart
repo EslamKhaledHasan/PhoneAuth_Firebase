@@ -1,4 +1,8 @@
+import 'package:country_pickers/country.dart';
 import 'package:flutter/material.dart';
+import 'package:country_pickers/country.dart';
+
+
 
 
 class RegisterScreen extends StatefulWidget {
@@ -10,18 +14,9 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController phoneController = TextEditingController();
-  Country selectedCountry = Country(
-    phoneCode: "20",
-    countryCode: "EG",
-    e164Sc: 0,
-    geographic: true,
-    level: 1,
-    name: "Egypt",
-    example: "Egypt",
-    displayName: "Egypt",
-    displayNameNoCountryCode: "EG",
-    e164Key: "e164Key",
-  );
+
+  
+
   @override
   Widget build(BuildContext context) {
     phoneController.selection = TextSelection.fromPosition(
@@ -72,7 +67,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   height: 20,
                 ),
                 TextFormField(
-                  cursorColor: Color.fromARGB(255, 194, 87, 34),
+                  cursorColor: Color.fromARGB(255, 176, 85, 39),
                   controller: phoneController,
                   style: const TextStyle(
                       fontSize: 18, fontWeight: FontWeight.bold),
