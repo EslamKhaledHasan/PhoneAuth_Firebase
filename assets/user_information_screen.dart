@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:phoneauth/provider/auth_provider.dart';
+import 'package:phoneauth/widgets/custom_button.dart';
 import 'package:provider/provider.dart';
 
 class UserInformationScreen extends StatefulWidget {
@@ -132,7 +133,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: TextFormField(
-        cursorColor: Colors.purple,
+        cursorColor: Color.fromARGB(255, 170, 75, 17),
         controller: controller,
         keyboardType: inputType,
         maxLines: maxLines,
@@ -141,7 +142,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
             margin: const EdgeInsets.all(8.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: Colors.purple,
+              color: Color.fromARGB(255, 195, 100, 11),
             ),
             child: Icon(
               icon,
