@@ -1,4 +1,8 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:phoneauth/provider/auth_provider.dart';
+import 'package:provider/provider.dart';
 
 class UserInformationScreen extends StatefulWidget {
   const UserInformationScreen({super.key});
@@ -36,7 +40,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         child: isLoading == true
             ? const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.purple,
+                  color: Color.fromARGB(255, 174, 92, 11),
                 ),
               )
             : SingleChildScrollView(
