@@ -45,7 +45,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     color: Colors.purple.shade50,
                   ),
                   child: Image.asset(
-                    "assets/2.png",
+                    "assets/pn.png",
                   ),
                 ),
                 const SizedBox(
@@ -72,7 +72,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   height: 20,
                 ),
                 TextFormField(
-                  cursorColor: Colors.purple,
+                  cursorColor: Color.fromARGB(255, 194, 87, 34),
                   controller: phoneController,
                   style: const TextStyle(
                       fontSize: 18, fontWeight: FontWeight.bold),

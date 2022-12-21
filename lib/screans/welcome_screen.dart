@@ -22,7 +22,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  "assets/pn.webp",
+                  "assets/pn2.webp",
                   height: 300,
                 ),
                 const SizedBox(height: 20),
