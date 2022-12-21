@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:phoneauth/provider/auth_provider.dart';
 import 'package:phoneauth/screans/home_screen.dart';
+import 'package:phoneauth/screans/user_info_screen.dart';
 import 'package:phoneauth/widgets/custom_button.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
